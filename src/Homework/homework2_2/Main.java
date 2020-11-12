@@ -22,6 +22,7 @@ public class Main {
                 }
             }
         }
+
         return summ;
     }
 
@@ -33,8 +34,35 @@ public class Main {
                 {"1", "2", "3", "4"},
 
         };
+        String[][] testArray2 = {
+                {"1", "2", "3", "4"},
+                {"1", "2", "3", "4"},
+                {"1", "2", "3", "4"},
+                {"1", "2", "3", "4"},
+                {"1", "2", "3", "4"}
+        };
+        String[][] testArray3 = {
+                {"1", "2", "3", "4"},
+                {"1", "2", "3", "4"},
+                {"1", "2", "3", "4"},
+                {"1", "2", "3", "4"},
+        };
         try {
             System.out.println(summ(testArray));
+        }catch (MySizeException e){
+            e.printMessage();
+        }catch (MyArrayDataException e){
+            e.printMessage();
+        }
+        try {
+            System.out.println(summ(testArray2));
+        }catch (MySizeException e){
+            e.printMessage();
+        }catch (MyArrayDataException e){
+            e.printMessage();
+        }
+        try {
+            System.out.println(summ(testArray3));
         }catch (MySizeException e){
             e.printMessage();
         }catch (MyArrayDataException e){
